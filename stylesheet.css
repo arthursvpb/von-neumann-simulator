@@ -1,14 +1,24 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
 body{
   font-family: 'Press Start 2P', cursive;
   background-color: #343a40e6;
+  position: inherit;
 }
 
 /* Alinhar para o centro */
-.align-items-center {
+/* .align-items-center {
   -ms-flex-align: center!important;
   align-items: center!important;
 }
 .d-flex {
   display: -ms-flexbox!important;
   display: flex!important;
+} */
+
+.lead{
+  font-size: 10px;
 }
