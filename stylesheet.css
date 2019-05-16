@@ -22,3 +22,12 @@ body{
 .lead{
   font-size: 10px;
 }
+
+.entrada{
+  width: 20%;
+  float: left;
+}
+
+.retangulo{
+  padding-bottom: 200px;
+}
