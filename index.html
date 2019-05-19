@@ -32,41 +32,88 @@
 </div>
 </section> -->
 
-<!-- SIMULADOR DE COMPUTADOR - CORPO -->
-<section class="section">
-  <div class="container">
+<!-- CORPO -->
+<section class="section m-5">
+  <div class="container-fluid border p-5">
     <div class="row">
-      <div class="col-12 border">
-
-<div class="col-6 border retangulo m-5"></div>
-
-        <select class="form-control entrada">
-          <option>?</option>
-          <option>?</option>
-          <option>and</option>
-          <option>or</option>
-          <option>not</option>
-          <option>add</option>
-          <option>sub</option>
-          <option>mult</option>
-          <option>div</option>
-          <option>jmp</option>
-          <option>jmp</option>
-          <option>jmp</option>
-          <option>jmp</option>
-          <option>jmp</option>
-          <option>nop</option>
-
-        </select>
-        <div class="input-group entrada">
-          <input type="text" class="form-control" placeholder="var1" maxlength="4">
+      <!-- MEMÓRIA RAM -->
+      <p>RAM</p>
+      <div class="col p-0">
+        <div class="border retangulo m-0"></div>
+      </div>
+      <!-- VERTICAL RULE -->
+      <div class="col-1 p-0">
+        <hr color="white">
+      </div>
+      <!-- CPU -->
+      <div class="col p-0">
+        <div class="border quadrado m-0">
+          <!-- COMPONENTS -->
+          <div class="row">
+            <!-- REGISTERS -->
+            <div class="col-3 p-0">
+              <div class="retangulo border ml-4 mt-3">
+                <p class="m-2">REG</p>
+              </div>
+            </div>
+            <!-- VERTICAL RULE -->
+            <div class="col-1 p-0 mt-3">
+              <hr color="white">
+            </div>
+            <!-- ALU -->
+            <div class="col-8 p-0">
+              <div class="retangulo border mr-4 mt-3">
+                <p class="m-2">ALU</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="input-group entrada">
-          <input type="text" class="form-control" placeholder="var2" maxlength="4">
-        </div>
+        <p>CPU</p>
       </div>
     </div>
   </div>
+
+  <!-- Vertical rule feito com css -->
+  <div class="vr"></div>
+
+  <!-- INPUT -->
+  <p class="d-flex justify-content-center inputDisplay m-0">INPUT</p>
+
+  <!-- Vertical rule feito com css -->
+  <div class="vr"></div>
+
+  <!-- ENTRADAS (escolha de função e variaveis) -->
+  <div class="container d-flex justify-content-center">
+    <select class="form-control entrada">
+      <option value="" disabled selected>function</option>
+      <option value="">?</option>
+      <option value="">?</option>
+      <option value="">and</option>
+      <option value="">or</option>
+      <option value="">not</option>
+      <option value="">add</option>
+      <option value="">sub</option>
+      <option value="">mult</option>
+      <option value="">div</option>
+      <option value="">jmp</option>
+      <option value="">jmp</option>
+      <option value="">jmp</option>
+      <option value="">jmp</option>
+      <option value="">jmp</option>
+      <option value="">nop</option>
+    </select>
+    <div class="input-group entrada">
+      <input type="text" class="form-control" placeholder="variable 1" maxlength="4">
+    </div>
+    <div class="input-group entrada">
+      <input type="text" class="form-control" placeholder="variable 2" maxlength="4">
+    </div>
+  </div>
+  <!-- FIM DAS ENTRADAS  -->
+
+
+
+</div>
 </section>
 
 <!-- Optional JavaScript -->

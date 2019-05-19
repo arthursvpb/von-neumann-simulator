@@ -7,27 +7,36 @@ body{
   font-family: 'Press Start 2P', cursive;
   background-color: #343a40e6;
   position: inherit;
+  color: white;
 }
 
-/* Alinhar para o centro */
-/* .align-items-center {
-  -ms-flex-align: center!important;
-  align-items: center!important;
-}
-.d-flex {
-  display: -ms-flexbox!important;
-  display: flex!important;
-} */
-
+/* NOMES */
 .lead{
   font-size: 10px;
 }
 
+/* MEMÓRIA RAM */
+.retangulo{
+  height: 250px;
+}
+
+/* CPU */
+.quadrado{
+  height: 450px;
+}
+
+
+/* INPUTS */
+.inputDisplay{
+  color: #fff;
+}
 .entrada{
   width: 20%;
   float: left;
 }
-
-.retangulo{
-  padding-bottom: 200px;
+/* LINHA VERTICAL  */
+.vr{
+  border-right:1px solid #ffffff;
+  height:50px;
+  width: 50%;
 }
