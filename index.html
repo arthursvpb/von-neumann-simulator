@@ -22,7 +22,7 @@
 <body>
 
   <!-- HEADER -->
-  <section>
+  <!-- <section>
   <div class="jumbotron jumbotron-fluid text-center bg-dark text-light">
   <h1>Von Neumann Simulator</h1>
   <hr>
@@ -30,7 +30,7 @@
   <a href="https://github.com/arthursvpb/vn-simulator" target="_blank">Project source code</a></p>
   <i class="fab fa-github"></i>
 </div>
-</section>
+</section> -->
 
 <!-- CORPO -->
 <section class="section m-5">
@@ -42,66 +42,66 @@
           <p class="ml-2 mt-1">RAM</p>
           <table class="table celulasMemoria">
 
-  <tbody>
-    <tr>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-    </tr>
-    <tr>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-    </tr>
-    <tr>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-    </tr>
-    <tr>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-      <td class="border">o</td>
-    </tr>
+            <tbody>
+              <tr>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+              </tr>
+              <tr>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+              </tr>
+              <tr>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+              </tr>
+              <tr>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+                <td class="border">o</td>
+              </tr>
 
-  </tbody>
-</table>
+            </tbody>
+          </table>
 
         </div>
       </div>
@@ -146,33 +146,54 @@
   <!-- Vertical rule feito com css -->
   <div class="vr"></div>
 
-  <!-- ENTRADAS (escolha de função e variaveis) -->
-  <div class="container d-flex justify-content-center">
-    <select class="form-control entrada">
-      <option value="" disabled selected>function</option>
-      <option value="">?</option>
-      <option value="">?</option>
-      <option value="">and</option>
-      <option value="">or</option>
-      <option value="">not</option>
-      <option value="">add</option>
-      <option value="">sub</option>
-      <option value="">mult</option>
-      <option value="">div</option>
-      <option value="">jmp</option>
-      <option value="">jmp</option>
-      <option value="">jmp</option>
-      <option value="">jmp</option>
-      <option value="">jmp</option>
-      <option value="">nop</option>
-    </select>
-    <div class="input-group entrada">
-      <input type="text" class="form-control" placeholder="variable 1" maxlength="4">
-    </div>
-    <div class="input-group entrada">
-      <input type="text" class="form-control" placeholder="variable 2" maxlength="4">
+  <!-- Display dos binarios -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm text-right">
+        <lead id="displayBin1">0</lead>
+      </div>
+      <div class="col-sm">
+        <lead id="displayBin2">0</lead>
+      </div>
     </div>
   </div>
+
+
+  <!-- ENTRADAS (escolha de função e variaveis) -->
+  <form>
+    <div class="container d-flex justify-content-center">
+      <!-- ESCOLHA DE FUNÇÃO -->
+      <select class="form-control entrada">
+        <option disabled selected>function</option>
+        <option>?</option>
+        <option>?</option>
+        <option>and</option>
+        <option>or</option>
+        <option>not</option>
+        <option>add</option>
+        <option>sub</option>
+        <option>mult</option>
+        <option>div</option>
+        <option>jmp</option>
+        <option>jmp</option>
+        <option>jmp</option>
+        <option>jmp</option>
+        <option>jmp</option>
+        <option>nop</option>
+      </select>
+      <div class="input-group entrada">
+        <!-- PRIMEIRO INPUT -->
+        <input id="entrada1" type="text" name="entrada1" class="form-control" placeholder="variable 1" maxlength="4">
+
+      </div>
+      <div class="input-group entrada">
+        <!-- SEGUNDO INPUT -->
+        <input id="entrada2" type="text" name="entrada2" class="form-control" placeholder="variable 2" maxlength="4">
+      </div>
+      <!-- SUBMIT -->
+      <button type="submit" class="btn btn-secondary entrada">Submit</button>
+    </div>
+  </form>
   <!-- FIM DAS ENTRADAS  -->
 
 
