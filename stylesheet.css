@@ -40,3 +40,9 @@ body{
   height:50px;
   width: 50%;
 }
+
+/* Tabela das células de memória */
+.celulasMemoria{
+    width: 97%;
+    margin: 0 auto;
+}
