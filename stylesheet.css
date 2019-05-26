@@ -1,6 +1,6 @@
 html, body {
-    margin: 0;
-    height: 100%;
+  margin: 0;
+  height: 100%;
 }
 
 body{
@@ -43,8 +43,10 @@ body{
 
 /* Tabela das células de memória */
 .celulasMemoria{
-    width: 97%;
-    margin: 0 auto;
+  width: 97%;
+  margin: 0 auto;
+  table-layout: fixed;
+  font-size: 2px;
 }
 
 .displayBin{

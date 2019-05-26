@@ -29,11 +29,22 @@ form.addEventListener("submit", function (evento){
   var bin1 = (+entrada1.value).toString(2);
   var bin2 = (+entrada2.value).toString(2);
 
-  // Pintar 3 células na RAM quando for submitado um input
+  // Pintar 3 células na RAM e colocar os valores quando for submitado um input
+
+  
+  tds[i+1].textContent = bin1;
+  tds[i+2].textContent = bin2;
+
   var count = 0;
+
   while(count < 3){
 
-    tds[i++].classList.add("bg-success");
+
+    tds[i].classList.add("bg-success");
+
+
+
+    i++;
 
     count++;
   }
