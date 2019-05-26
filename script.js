@@ -5,6 +5,7 @@ var entrada2 = document.querySelector("#entrada2");
 var displayBin1 = document.querySelector("#displayBin1");
 var displayBin2 = document.querySelector("#displayBin2");
 var tds = document.querySelectorAll("td");
+var selectFuncao = document.querySelector("#selectFuncao");
 
 // Contador para pintar as células
 var i = 0;
@@ -31,22 +32,23 @@ form.addEventListener("submit", function (evento){
 
   // Pintar 3 células na RAM e colocar os valores quando for submitado um input
 
-  
+  // Seleciona o conteúdo da funcao selecionada e coloca na RAM
+  tds[i].textContent = selectFuncao[selectFuncao.selectedIndex].textContent;
+
+  // Adiciona os conteúdos dos inputs na RAM
   tds[i+1].textContent = bin1;
   tds[i+2].textContent = bin2;
 
+  // Contador para pintar 3
   var count = 0;
-
   while(count < 3){
 
-
     tds[i].classList.add("bg-success");
-
-
 
     i++;
 
     count++;
+    
   }
 
 });
