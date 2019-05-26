@@ -6,6 +6,9 @@ var displayBin1 = document.querySelector("#displayBin1");
 var displayBin2 = document.querySelector("#displayBin2");
 var tds = document.querySelectorAll("td");
 
+// Contador para pintar as células
+var i = 0;
+
 // Converte e mostra o display do INPUT1
 entrada1.addEventListener("input", function() {
   var bin1 = (+entrada1.value).toString(2);
@@ -26,13 +29,13 @@ form.addEventListener("submit", function (evento){
   var bin1 = (+entrada1.value).toString(2);
   var bin2 = (+entrada2.value).toString(2);
 
-  // alert(bin1);
-  // alert(bin2);
+  // Pintar 3 células na RAM quando for submitado um input
+  var count = 0;
+  while(count < 3){
 
-  // Pintar quando for enviado um input
-  // Ainda falta ajeitar a função para pintar 3 quadrados em ordem toda vez que apertar submit
-  for (var i = 0; i < 3; i++) {
-    tds[i].classList.add("bg-white");
+    tds[i++].classList.add("bg-white");
+
+    count++;
   }
 
 });
