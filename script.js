@@ -33,7 +33,7 @@ form.addEventListener("submit", function (evento){
   var count = 0;
   while(count < 3){
 
-    tds[i++].classList.add("bg-white");
+    tds[i++].classList.add("bg-success");
 
     count++;
   }
