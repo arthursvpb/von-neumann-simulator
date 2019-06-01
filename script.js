@@ -29,31 +29,19 @@ function GetCellValues() {
 GetCellValues();
 
 // Colocar o valor da RAM no registrador selecionado
-// execute.addEventListener("onclick", function() {
-//   debugger
-//   for(let j = 0; j < 45; j++){
-//     if (j in functionValues == true) {
-//       console.log(functionValues[j])
-//     }
-//     else if (j in valueValues == true) {
-//       console.log(valueValues[j])
-//     }
-//     else if (j in regValues == true) {
-//       console.log(regValues[j])
-//     }
-//   }
-// });
-
 function printValues() {
   for(let j = 0; j < 45; j++){
     if (j in functionValues) {
-      console.log(functionValues[j])
+      // console.log(functionValues[j])
+      // vai para dentro da ULA
     }
     if (j in valueValues) {
-      console.log(valueValues[j])
+      // console.log(valueValues[j])
+      // vai para dentro do registrador designado
     }
     if (j in regValues) {
-      console.log(regValues[j])
+      // console.log(regValues[j])
+      // local onde sera armazenado o valor
     }
   }
 };

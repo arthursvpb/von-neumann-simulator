@@ -26,7 +26,7 @@ body{
 
 /* CPU */
 .quadrado{
-    height: 730px;
+  height: 730px;
 }
 
 
@@ -67,4 +67,10 @@ body{
 
 #execute{
   margin: 10px;
+}
+
+#pc, #ir{
+  height: 100px;
+  width: 100px;
+  margin-top: 20px;
 }
