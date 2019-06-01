@@ -19,7 +19,7 @@ var regValues = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41, 44];
 
 // Função para pegar os valores dentro da RAM
 function getCellValues() {
-    ramValues = []; 
+    ramValues = [];
     for (var r = 0, n = celulasMemoria.rows.length; r < n; r++) {
         for (var c = 0, m = celulasMemoria.rows[r].cells.length; c < m; c++) {
           ramValues.push(celulasMemoria.rows[r].cells[c].innerHTML);
@@ -60,11 +60,12 @@ var arrayDeRegistradores = [];
     arrayDeRegistradores.push(macaco);
   }
 
-  for (var l = 0; l < 15; l++){
+  for (var l = 0; l < 15; ++l){
     console.log("Valor: " + arrayDeValores[l])
     console.log("Registrador: " + arrayDeRegistradores[l])
 
     regDisplay[arrayDeRegistradores[l]].textContent = arrayDeValores[l];
+    regDisplay[arrayDeRegistradores[l]].classList.add("bg-success");
   }
 
   // for (var p = 1, o = 3; p <= 45; p+=o) {
