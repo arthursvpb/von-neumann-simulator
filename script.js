@@ -9,6 +9,7 @@ var selectFuncao = document.querySelector("#selectFuncao");
 var selectRegister = document.querySelector("#selectRegister");
 var regDisplay = document.querySelectorAll(".regDisplay");
 var execute = document.querySelector("#execute");
+var celulasMemoria = document.getElementById('celulasMemoria');
 
 // Variáveis da memória RAM
 var ramValues = [];
@@ -18,8 +19,7 @@ var regValues = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41, 44];
 
 // Função para pegar os valores dentro da RAM
 function getCellValues() {
-    ramValues = [];
-    var celulasMemoria = document.getElementById('celulasMemoria');
+    ramValues = []; 
     for (var r = 0, n = celulasMemoria.rows.length; r < n; r++) {
         for (var c = 0, m = celulasMemoria.rows[r].cells.length; c < m; c++) {
           ramValues.push(celulasMemoria.rows[r].cells[c].innerHTML);
@@ -39,18 +39,27 @@ function printValues() {
   //   if (j in functionValues) {
   //     // vai para dentro da ULA
   //   }
-  for (var j = 1, u = 3; j < 45; j+=u){ // De 3 em 3
-      // local onde sera armazenado o valor
-    for (var r = 0, n = registradorTable.rows.length; r < n; r++) { // Vai de 1 a 15
-      if (registradorTable.rows[r].cells[0].attributes.registervalue.value == regValues[r]){
-          console.log("posicao do registrador: " + regValues[r])
-          console.log("posicao do valor: " + ramValues[j])
-      }
-    }
-  } 
-  for (var p = 1, o = 3; p <= 45; p+=o) {
-    console.log(ramValues[p])
+  // for (var j = 1, u = 3; j < 45; j+=u){ // De 3 em 3
+  //     // local onde sera armazenado o valor
+  //   for (var r = 0, n = registradorTable.rows.length; r < n; r++) { // Vai de 1 a 15
+  //     if (registradorTable.rows[r].cells[0].attributes.registervalue.value == regValues[r]){
+  //         console.log("posicao do registrador: " + regValues[r])
+  //         console.log("posicao do valor: " + ramValues[j])
+  //     }
+  //   }
+  // }
+
+  for (var j = 1, o = 3; j < 45; j+=o){
+    console.log("Valor: " + ramValues[j]) //Todos os values da memoria
   }
+
+  for (var j = 2, o = 3; j < 45; j+=o){
+    console.log("Endereco: " + ramValues[j])
+  }
+
+  // for (var p = 1, o = 3; p <= 45; p+=o) {
+  //   console.log(ramValues[p])
+  // }
 };
 
 
