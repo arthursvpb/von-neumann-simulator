@@ -26,7 +26,7 @@ body{
 
 /* CPU */
 .quadrado{
-    height: 690px;
+    height: 730px;
 }
 
 
@@ -58,11 +58,11 @@ body{
 }
 
 #registrador{
-    height: 650px;
+  height: 700px;
 }
 
 #corpo{
-  height: 805px;
+  height: 870px;
 }
 
 #execute{
