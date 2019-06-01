@@ -56,12 +56,15 @@ var arrayDeRegistradores = [];
   }
 
   for (var j = 2, o = 3; j < 45; j+=o){
-    arrayDeRegistradores.push(ramValues[j]);
+    var macaco = parseInt(ramValues[j], 2);
+    arrayDeRegistradores.push(macaco);
   }
 
   for (var l = 0; l < 15; l++){
     console.log("Valor: " + arrayDeValores[l])
     console.log("Registrador: " + arrayDeRegistradores[l])
+
+    regDisplay[arrayDeRegistradores[l]].textContent = arrayDeValores[l];
   }
 
   // for (var p = 1, o = 3; p <= 45; p+=o) {
