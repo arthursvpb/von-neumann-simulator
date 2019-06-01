@@ -28,9 +28,17 @@ function GetCellValues() {
     }
 }
 
+GetCellValues();
+
 
 // Colocar o valor da RAM no registrador selecionado
 execute.addEventListener("onclick", function() {
+
+  for(let j = 0; j < ramValues.length; j++){
+    if () {
+      
+    }
+  }
 
 
 });
