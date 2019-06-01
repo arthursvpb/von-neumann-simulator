@@ -126,23 +126,23 @@
               <div id="registrador" class="retangulo border ml-4 mt-3">
                 <p class="m-2">REG</p>
 
-                <table class="table celulasMemoria">
+                <table id="registradorTable" class="table celulasMemoria">
                   <tbody>
-                    <tr><td class="border" value="0001">rg1</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="0010">rg2</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="0011">rg3</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="0100">rg4</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="0101">rg5</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="0110">rg6</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="0111">rg7</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="1000">rg8</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="1001">rg9</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="1010">rg10</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="1011">rg11</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="1100">rg12</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="1101">rg13</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="1110">rg14</td><td class="border regDisplay">0000</td></tr>
-                    <tr><td class="border" value="1111">rg15</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="2">rg1</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="5">rg2</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="8">rg3</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="11">rg4</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="14">rg5</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="17">rg6</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="20">rg7</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="23">rg8</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="26">rg9</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="29">rg10</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="32">rg11</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="35">rg12</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="38">rg13</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="41">rg14</td><td class="border regDisplay">0000</td></tr>
+                    <tr><td class="border" registerValue="44">rg15</td><td class="border regDisplay">0000</td></tr>
                   </tbody>
                 </table>
 
@@ -245,7 +245,7 @@
         </select>
       </div>
       <!-- SUBMIT -->
-      <button type="submit" class="btn btn-secondary entrada">Submit</button>
+      <button type="submit" class="btn btn-secondary entrada" onclick="getCellValues()">Submit</button>
     </div>
   </form>
   <!-- FIM DAS ENTRADAS  -->
