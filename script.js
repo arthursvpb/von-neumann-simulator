@@ -35,28 +35,21 @@ var registradorTable = document.getElementById('registradorTable');
 // Colocar o valor da RAM no registrador selecionado
 function printValues() {
   // debugger
-  for(let j = 0; j < 45; j++){
-    if (j in functionValues) {
-      // console.log(functionValues[j])
-      // vai para dentro da ULA
-    }
-    if (j in valueValues) {
-      // console.log(valueValues[j])
-      // vai para dentro do registrador designado
-    }
-    if (j in regValues) {
-      // console.log(regValues[j])
+  // for(var j = 0; j < 45; j++){
+  //   if (j in functionValues) {
+  //     // vai para dentro da ULA
+  //   }
+  for (var j = 1, u = 3; j < 45; j+=u){ // De 3 em 3
       // local onde sera armazenado o valor
-      for (var r = 0, n = registradorTable.rows.length; r < n; r++) {
-        // for (var c = 0, m = registradorTable.rows[r].cells.length; c < m; c++) {
-        if (registradorTable.rows[r].cells[0].attributes.registervalue.value == regValues[j]){
-          // for (var k = 1, f = ramValues.length, o = 3; k < f; k+=o){
-            console.log(regValues[j])
-          // }
-          // registradorTable.rows[r].cells[c].innerHTML
-        }
+    for (var r = 0, n = registradorTable.rows.length; r < n; r++) { // Vai de 1 a 15
+      if (registradorTable.rows[r].cells[0].attributes.registervalue.value == regValues[r]){
+          console.log("posicao do registrador: " + regValues[r])
+          console.log("posicao do valor: " + ramValues[j])
       }
     }
+  } 
+  for (var p = 1, o = 3; p <= 45; p+=o) {
+    console.log(ramValues[p])
   }
 };
 
