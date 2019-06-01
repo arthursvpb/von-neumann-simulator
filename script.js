@@ -52,3 +52,8 @@ form.addEventListener("submit", function (evento){
   }
 
 });
+
+// Desativar input do teclado quando digito em um input number
+$("[type='number']").keypress(function (evt) {
+    evt.preventDefault();
+});

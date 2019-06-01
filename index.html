@@ -34,7 +34,7 @@
 
 <!-- CORPO -->
 <section class="section m-5">
-  <div class="container-fluid border pt-5 pl-5 pr-5 pb-0">
+  <div id="corpo" class="container-fluid border pt-5 pl-5 pr-5 pb-0">
     <div class="row">
       <!-- MEMÓRIA RAM -->
       <div class="col p-0 border-left border-bottom">
@@ -119,9 +119,11 @@
         </div>
       </div>
       <!-- VERTICAL RULE -->
+
       <div class="col-1 p-0">
         <hr color="white">
       </div>
+
       <!-- CPU -->
       <div class="col p-0">
         <div class="border quadrado m-0">
@@ -129,8 +131,29 @@
           <div class="row">
             <!-- REGISTERS -->
             <div class="col-3 p-0">
-              <div class="retangulo border ml-4 mt-3">
+              <div id="registrador" class="retangulo border ml-4 mt-3">
                 <p class="m-2">REG</p>
+
+                <table class="table celulasMemoria">
+            <tbody>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+              <tr><td class="border">0000</td></tr>
+            </tbody>
+          </table>
+
+
               </div>
             </div>
             <!-- VERTICAL RULE -->
@@ -142,6 +165,8 @@
               <div class="retangulo border mr-4 mt-3">
                 <p class="m-2">ALU</p>
               </div>
+                               <button id="execute" type="submit" class="btn btn-secondary">EXECUTE</button>
+
             </div>
           </div>
         </div>
@@ -174,7 +199,6 @@
     </div>
   </div>
 
-
   <!-- ENTRADAS (escolha de função e variaveis) -->
   <form>
     <div class="container d-flex justify-content-center">
@@ -199,12 +223,29 @@
       </select>
       <div class="input-group entrada">
         <!-- PRIMEIRO INPUT -->
-        <input id="entrada1" type="text" name="entrada1" class="form-control" placeholder="variable 1" maxlength="2">
+        <input id="entrada1" type="number" name="entrada1" class="form-control" placeholder="variable 1" maxlength="2" max="15" min="0" >
 
       </div>
       <div class="input-group entrada">
         <!-- SEGUNDO INPUT -->
-        <input id="entrada2" type="text" name="entrada2" class="form-control" placeholder="variable 2" maxlength="2">
+        <select id="selectFuncao" class="form-control entrada">
+        <option disabled selected>select reg</option>
+        <option value="0001">reg 1</option>
+        <option value="0010">reg 2</option>
+        <option value="0011">reg 3</option>
+        <option value="0100">reg 4</option>
+        <option value="0101">reg 5</option>
+        <option value="0110">reg 6</option>
+        <option value="0111">reg 7</option>
+        <option value="1000">reg 8</option>
+        <option value="1001">reg 9</option>
+        <option value="1010">reg 10</option>
+        <option value="1011">reg 11</option>
+        <option value="1100">reg 12</option>
+        <option value="1101">reg 13</option>
+        <option value="1110">reg 14</option>
+        <option value="1111">reg 15</option>
+      </select>
       </div>
       <!-- SUBMIT -->
       <button type="submit" class="btn btn-secondary entrada">Submit</button>

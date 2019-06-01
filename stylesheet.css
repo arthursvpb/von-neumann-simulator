@@ -3,6 +3,10 @@ html, body {
   height: 100%;
 }
 
+table {
+  border-collapse: inherit;
+}
+
 body{
   font-family: 'Press Start 2P', cursive;
   background-color: #343a40e6;
@@ -17,12 +21,12 @@ body{
 
 /* MEMÓRIA RAM */
 .retangulo{
-  height: 250px;
+  height: 290px;
 }
 
 /* CPU */
 .quadrado{
-  height: 450px;
+    height: 690px;
 }
 
 
@@ -46,9 +50,20 @@ body{
   width: 97%;
   margin: 0 auto;
   table-layout: fixed;
-  font-size: 2px;
+  font-size: 10px;
 }
 
 .displayBin{
   width: 100%;
+}
+
+#registrador{
+    height: 650px;
+}
+
+#corpo{
+  height: 805px;
+}
+
+#execute{
 }
