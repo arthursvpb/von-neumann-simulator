@@ -7,6 +7,30 @@ var displayBin2 = document.querySelector("#displayBin2");
 var tds = document.querySelectorAll("td");
 var selectFuncao = document.querySelector("#selectFuncao");
 var selectRegister = document.querySelector("#selectRegister");
+var regDisplay = document.querySelectorAll(".regDisplay");
+var execute = document.querySelector("#execute");
+var ramValues = [];
+
+// Função para pegar os valores dentro da RAM
+function GetCellValues() {
+    var celulasMemoria = document.getElementById('celulasMemoria');
+    for (var r = 0, n = celulasMemoria.rows.length; r < n; r++) {
+        for (var c = 0, m = celulasMemoria.rows[r].cells.length; c < m; c++) {
+
+          ramValues.push(celulasMemoria.rows[r].cells[c].innerHTML);
+
+        }
+    }
+}
+
+
+// Colocar o valor da RAM no registrador selecionado
+execute.addEventListener("onclick", function() {
+
+
+});
+
+
 
 // Contador para pintar as células
 var i = 0;
@@ -57,5 +81,5 @@ form.addEventListener("submit", function (evento){
 
 // Desativar input do teclado quando digito em um input number
 $("[type='number']").keypress(function (evt) {
-    evt.preventDefault();
+  evt.preventDefault();
 });
