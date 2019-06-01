@@ -29,7 +29,6 @@ function getCellValues() {
 
 getCellValues();
 
-
 var registradorTable = document.getElementById('registradorTable');
 
 // Colocar o valor da RAM no registrador selecionado
@@ -49,12 +48,20 @@ function printValues() {
   //   }
   // }
 
+var arrayDeValores = [];
+var arrayDeRegistradores = [];
+
   for (var j = 1, o = 3; j < 45; j+=o){
-    console.log("Valor: " + ramValues[j]) //Todos os values da memoria
+    arrayDeValores.push(ramValues[j]);
   }
 
   for (var j = 2, o = 3; j < 45; j+=o){
-    console.log("Endereco: " + ramValues[j])
+    arrayDeRegistradores.push(ramValues[j]);
+  }
+
+  for (var l = 0; l < 15; l++){
+    console.log("Valor: " + arrayDeValores[l])
+    console.log("Registrador: " + arrayDeRegistradores[l])
   }
 
   // for (var p = 1, o = 3; p <= 45; p+=o) {
