@@ -12,36 +12,51 @@ var execute = document.querySelector("#execute");
 
 // Variáveis da memória RAM
 var ramValues = [];
-var functionValues = [00, 03, 06, 09, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42];
-var valueValues = [01, 04, 07, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43];
-var regValues = [02, 05, 08, 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41, 44];
+var functionValues = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42];
+var valueValues = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43];
+var regValues = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41, 44];
 
 // Função para pegar os valores dentro da RAM
 function GetCellValues() {
     var celulasMemoria = document.getElementById('celulasMemoria');
     for (var r = 0, n = celulasMemoria.rows.length; r < n; r++) {
         for (var c = 0, m = celulasMemoria.rows[r].cells.length; c < m; c++) {
-
           ramValues.push(celulasMemoria.rows[r].cells[c].innerHTML);
-
         }
     }
 }
 
 GetCellValues();
 
-
 // Colocar o valor da RAM no registrador selecionado
-execute.addEventListener("onclick", function() {
+// execute.addEventListener("onclick", function() {
+//   debugger
+//   for(let j = 0; j < 45; j++){
+//     if (j in functionValues == true) {
+//       console.log(functionValues[j])
+//     }
+//     else if (j in valueValues == true) {
+//       console.log(valueValues[j])
+//     }
+//     else if (j in regValues == true) {
+//       console.log(regValues[j])
+//     }
+//   }
+// });
 
-  for(let j = 0; j < ramValues.length; j++){
-    if () {
-      
+function printValues() {
+  for(let j = 0; j < 45; j++){
+    if (j in functionValues) {
+      console.log(functionValues[j])
+    }
+    if (j in valueValues) {
+      console.log(valueValues[j])
+    }
+    if (j in regValues) {
+      console.log(regValues[j])
     }
   }
-
-
-});
+};
 
 
 
