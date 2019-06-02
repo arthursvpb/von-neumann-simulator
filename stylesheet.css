@@ -69,7 +69,7 @@ body{
   margin: 10px;
 }
 
-#pc, #ir{
+#pc, #ir, #alu{
   height: 100px;
   width: 100px;
   margin-top: 20px;

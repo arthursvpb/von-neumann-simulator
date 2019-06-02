@@ -12,7 +12,13 @@ var execute = document.querySelector("#execute");
 var celulasMemoria = document.getElementById('celulasMemoria');
 
 var ramValues = [];
+var functionValues = [];
 var regLabel = document.querySelectorAll(".regLabel");
+var regValues = [];
+
+var aluFuncao = document.querySelector('.aluFuncao');
+var irFuncao = document.querySelector('.irFuncao');
+var pcFuncao = document.querySelector('.pcFuncao');
 
 
 // Colocar o valor da RAM no registrador selecionado
@@ -54,10 +60,17 @@ submit.addEventListener('submit', function (evento){
   // Seleciona o valor do index selecionado do regitrador e coloca na RAM.
   tds[i+2].textContent = selectRegister[selectRegister.selectedIndex].value;
 
-  // Ja cria o Array com os valores da RAM no momento do input 
+  // Ja cria o Array com os valores da RAM no momento do input
   ramValues.push(selectFuncao[selectFuncao.selectedIndex].textContent);
   ramValues.push(bin1);
   ramValues.push(textContent = selectRegister[selectRegister.selectedIndex].value);
+
+  // Cria o array das funcoes para serem executadas
+  functionValues.push(selectFuncao[selectFuncao.selectedIndex].textContent);
+
+  // Cria o array do endereço da próxima instrução
+  regValues.push(textContent = selectRegister[selectRegister.selectedIndex].value);
+
 
   // Contador para pintar 3
   var count = 0;
@@ -188,6 +201,18 @@ execute.addEventListener('submit', function(evento) {
 
     }
   }
+
+  irFuncao.textContent = functionValues[0];
+  irFuncao.classList.add("bg-info");
+
+  aluFuncao.textContent = functionValues[1];
+  aluFuncao.classList.add("bg-primary");
+
+  pcFuncao.textContent = regValues[0];
+  pcFuncao.classList.add("bg-warning");
+
+  regValues.shift();
+  functionValues.shift();
 
   alert("EXECUTOU ESSA MIZERA");
 
