@@ -76,13 +76,13 @@ submit.addEventListener('submit', function (evento){
   // Ja cria o Array com os valores da RAM no momento do input
   ramValues.push(selectFuncao[selectFuncao.selectedIndex].textContent);
   ramValues.push(bin1);
-  ramValues.push(textContent = selectRegister[selectRegister.selectedIndex].value);
+  ramValues.push(selectRegister[selectRegister.selectedIndex].value);
 
   // Cria o array das funcoes para serem executadas
   functionValues.push(selectFuncao[selectFuncao.selectedIndex].textContent);
 
   // Cria o array do endereço da próxima instrução
-  regValues.push(textContent = selectRegister[selectRegister.selectedIndex].value);
+  regValues.push(selectRegister[selectRegister.selectedIndex].value);
 
   // Cria o array do conteúdo do endereço
   binValues.push(bin1);
@@ -240,10 +240,11 @@ execute.addEventListener('submit', function(evento) {
     // console.log("pegou")
     console.log((parseInt(binValues[1], 2) * parseInt(binValues[0], 2)).toString(2));
 
-      regDisplay[parseInt(regValues[0], 2)].textContent = ((parseInt(binValues[1], 2) * parseInt(binValues[0], 2)).toString(2));
+      regDisplay[(parseInt(regValues[0], 2)-1)].textContent = ((parseInt(binValues[1], 2) * parseInt(binValues[0], 2)).toString(2));
+      regValues.shift();
   }
 
-  regValues.shift();
+  
   functionValues.shift();
 
 
