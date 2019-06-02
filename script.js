@@ -1,5 +1,5 @@
 // FUNÇÃO PARA TRANSFORMAR OS INPUTS EM BINÁRIO
-var form = document.querySelector("form");
+var submit = document.querySelector("#submit");
 var entrada1 = document.querySelector("#entrada1");
 var entrada2 = document.querySelector("#entrada2");
 var displayBin1 = document.querySelector("#displayBin1");
@@ -11,67 +11,12 @@ var regDisplay = document.querySelectorAll(".regDisplay");
 var execute = document.querySelector("#execute");
 var celulasMemoria = document.getElementById('celulasMemoria');
 
-// Variáveis da memória RAM
 var ramValues = [];
-var functionValues = [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42];
-var valueValues = [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34, 37, 40, 43];
-var regValues = [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35, 38, 41, 44];
+var regLabel = document.querySelectorAll(".regLabel");
 
-// Função para pegar os valores dentro da RAM
-function getCellValues() {
-    ramValues = [];
-    for (var r = 0, n = celulasMemoria.rows.length; r < n; r++) {
-        for (var c = 0, m = celulasMemoria.rows[r].cells.length; c < m; c++) {
-          ramValues.push(celulasMemoria.rows[r].cells[c].innerHTML);
-        }
-    }
-}
-
-getCellValues();
-
-var registradorTable = document.getElementById('registradorTable');
 
 // Colocar o valor da RAM no registrador selecionado
-function printValues() {
-  // debugger
-  // for(var j = 0; j < 45; j++){
-  //   if (j in functionValues) {
-  //     // vai para dentro da ULA
-  //   }
-  // for (var j = 1, u = 3; j < 45; j+=u){ // De 3 em 3
-  //     // local onde sera armazenado o valor
-  //   for (var r = 0, n = registradorTable.rows.length; r < n; r++) { // Vai de 1 a 15
-  //     if (registradorTable.rows[r].cells[0].attributes.registervalue.value == regValues[r]){
-  //         console.log("posicao do registrador: " + regValues[r])
-  //         console.log("posicao do valor: " + ramValues[j])
-  //     }
-  //   }
-  // }
 
-var arrayDeValores = [];
-var arrayDeRegistradores = [];
-
-  for (var j = 1, o = 3; j < 45; j+=o){
-    arrayDeValores.push(ramValues[j]);
-  }
-
-  for (var j = 2, o = 3; j < 45; j+=o){
-    var macaco = parseInt(ramValues[j], 2);
-    arrayDeRegistradores.push(macaco);
-  }
-
-  for (var l = 0; l < 15; ++l){
-    console.log("Valor: " + arrayDeValores[l])
-    console.log("Registrador: " + arrayDeRegistradores[l])
-
-    regDisplay[arrayDeRegistradores[l]].textContent = arrayDeValores[l];
-    regDisplay[arrayDeRegistradores[l]].classList.add("bg-success");
-  }
-
-  // for (var p = 1, o = 3; p <= 45; p+=o) {
-  //   console.log(ramValues[p])
-  // }
-};
 
 
 
@@ -91,7 +36,7 @@ selectRegister.addEventListener("input", function() {
 });
 
 // Pega os binários e salva
-form.addEventListener("submit", function (evento){
+submit.addEventListener('submit', function (evento){
 
   // Prevenir atualização da página
   evento.preventDefault();
@@ -109,6 +54,11 @@ form.addEventListener("submit", function (evento){
   // Seleciona o valor do index selecionado do regitrador e coloca na RAM.
   tds[i+2].textContent = selectRegister[selectRegister.selectedIndex].value;
 
+  // Ja cria o Array com os valores da RAM no momento do input 
+  ramValues.push(selectFuncao[selectFuncao.selectedIndex].textContent);
+  ramValues.push(bin1);
+  ramValues.push(textContent = selectRegister[selectRegister.selectedIndex].value);
+
   // Contador para pintar 3
   var count = 0;
   while(count < 3){
@@ -125,4 +75,120 @@ form.addEventListener("submit", function (evento){
 // Desativar input do teclado quando digito em um input number
 $("[type='number']").keypress(function (evt) {
   evt.preventDefault();
+});
+
+
+execute.addEventListener('submit', function(evento) {
+
+  // Prevenir atualização da página
+  evento.preventDefault();
+
+  // ULTRA MASTER GAMBIARRA SEM LOOP NA TORA MESMO
+  for(var j = 2; j <= 45; j+=3){
+    if(ramValues[j] == regDisplay[0].textContent){
+      regDisplay[0].textContent = ramValues[j-1];
+      regDisplay[0].classList.add("bg-success");
+      regLabel[0].classList.add("bg-warning");
+    }
+
+    if(ramValues[j] == regDisplay[1].textContent){
+      regDisplay[1].textContent = ramValues[j-1];
+      regDisplay[1].classList.add("bg-success");
+      regLabel[1].classList.add("bg-warning");
+    }
+
+    if(ramValues[j] == regDisplay[2].textContent){
+      regDisplay[2].textContent = ramValues[j-1];
+      regDisplay[2].classList.add("bg-success");
+      regLabel[2].classList.add("bg-warning");
+
+    }
+
+    if(ramValues[j] == regDisplay[3].textContent){
+      regDisplay[3].textContent = ramValues[j-1];
+      regDisplay[3].classList.add("bg-success");
+      regLabel[3].classList.add("bg-warning");
+
+    }
+
+    if(ramValues[j] == regDisplay[4].textContent){
+      regDisplay[4].textContent = ramValues[j-1];
+      regDisplay[4].classList.add("bg-success");
+      regLabel[4].classList.add("bg-warning");
+
+    }
+
+    if(ramValues[j] == regDisplay[5].textContent){
+      regDisplay[5].textContent = ramValues[j-1];
+      regDisplay[5].classList.add("bg-success");
+      regLabel[5].classList.add("bg-warning");
+
+    }
+
+    if(ramValues[j] == regDisplay[6].textContent){
+      regDisplay[6].textContent = ramValues[j-1];
+      regDisplay[6].classList.add("bg-success");
+      regLabel[6].classList.add("bg-warning");
+
+    }
+
+    if(ramValues[j] == regDisplay[7].textContent){
+      regDisplay[7].textContent = ramValues[j-1];
+      regDisplay[7].classList.add("bg-success");
+      regLabel[7].classList.add("bg-warning");
+
+    }
+
+    if(ramValues[j] == regDisplay[8].textContent){
+      regDisplay[8].textContent = ramValues[j-1];
+      regDisplay[8].classList.add("bg-success");
+      regLabel[8].classList.add("bg-warning");
+
+    }
+
+    if(ramValues[j] == regDisplay[9].textContent){
+      regDisplay[9].textContent = ramValues[j-1];
+      regDisplay[9].classList.add("bg-success");
+      regLabel[9].classList.add("bg-warning");
+
+    }
+
+    if(ramValues[j] == regDisplay[10].textContent){
+      regDisplay[10].textContent = ramValues[j-1];
+      regDisplay[10].classList.add("bg-success");
+      regLabel[10].classList.add("bg-warning");
+
+    }
+
+    if(ramValues[j] == regDisplay[11].textContent){
+      regDisplay[11].textContent = ramValues[j-1];
+      regDisplay[11].classList.add("bg-success");
+      regLabel[11].classList.add("bg-warning");
+
+    }
+
+    if(ramValues[j] == regDisplay[12].textContent){
+      regDisplay[12].textContent = ramValues[j-1];
+      regDisplay[12].classList.add("bg-success");
+      regLabel[12].classList.add("bg-warning");
+
+    }
+
+    if(ramValues[j] == regDisplay[13].textContent){
+      regDisplay[13].textContent = ramValues[j-1];
+      regDisplay[13].classList.add("bg-success");
+      regLabel[13].classList.add("bg-warning");
+
+    }
+
+    if(ramValues[j] == regDisplay[14].textContent){
+      regDisplay[14].textContent = ramValues[j-1];
+      regDisplay[14].classList.add("bg-success");
+      regLabel[14].classList.add("bg-warning");
+
+    }
+  }
+
+  alert("EXECUTOU ESSA MIZERA");
+
 });

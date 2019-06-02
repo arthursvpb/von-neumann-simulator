@@ -107,8 +107,9 @@
           </table>
 
         </div>
-        <button id="execute" type="submit" class="btn btn-secondary" onclick="getCellValues(), printValues()">EXECUTE</button>
-
+        <form id="execute">
+        <button type="submit" class="btn btn-secondary">EXECUTE</button>
+        </form>
       </div>
       <!-- VERTICAL RULE -->
 
@@ -128,21 +129,21 @@
 
                 <table id="registradorTable" class="table celulasMemoria">
                   <tbody>
-                    <tr><td class="border" registerValue="2">rg1</td><td class="border regDisplay" value="0001">0000</td></tr>
-                    <tr><td class="border" registerValue="5">rg2</td><td class="border regDisplay" value="0010">0000</td></tr>
-                    <tr><td class="border" registerValue="8">rg3</td><td class="border regDisplay" value="0011">0000</td></tr>
-                    <tr><td class="border" registerValue="11">rg4</td><td class="border regDisplay" value="0100">0000</td></tr>
-                    <tr><td class="border" registerValue="14">rg5</td><td class="border regDisplay" value="0101">0000</td></tr>
-                    <tr><td class="border" registerValue="17">rg6</td><td class="border regDisplay" value="0110">0000</td></tr>
-                    <tr><td class="border" registerValue="20">rg7</td><td class="border regDisplay" value="0111">0000</td></tr>
-                    <tr><td class="border" registerValue="23">rg8</td><td class="border regDisplay" value="1000">0000</td></tr>
-                    <tr><td class="border" registerValue="26">rg9</td><td class="border regDisplay" value="1001">0000</td></tr>
-                    <tr><td class="border" registerValue="29">rg10</td><td class="border regDisplay" value="1010">0000</td></tr>
-                    <tr><td class="border" registerValue="32">rg11</td><td class="border regDisplay" value="1011">0000</td></tr>
-                    <tr><td class="border" registerValue="35">rg12</td><td class="border regDisplay" value="1100">0000</td></tr>
-                    <tr><td class="border" registerValue="38">rg13</td><td class="border regDisplay" value="1101">0000</td></tr>
-                    <tr><td class="border" registerValue="41">rg14</td><td class="border regDisplay" value="1110">0000</td></tr>
-                    <tr><td class="border" registerValue="44">rg15</td><td class="border regDisplay" value="1111">0000</td></tr>
+                    <tr><td class="border regLabel">rg1</td><td class="border regDisplay">0001</td></tr>
+                    <tr><td class="border regLabel">rg2</td><td class="border regDisplay">0010</td></tr>
+                    <tr><td class="border regLabel">rg3</td><td class="border regDisplay">0011</td></tr>
+                    <tr><td class="border regLabel">rg4</td><td class="border regDisplay">0100</td></tr>
+                    <tr><td class="border regLabel">rg5</td><td class="border regDisplay">0101</td></tr>
+                    <tr><td class="border regLabel">rg6</td><td class="border regDisplay">0110</td></tr>
+                    <tr><td class="border regLabel">rg7</td><td class="border regDisplay">0111</td></tr>
+                    <tr><td class="border regLabel">rg8</td><td class="border regDisplay">1000</td></tr>
+                    <tr><td class="border regLabel">rg9</td><td class="border regDisplay">1001</td></tr>
+                    <tr><td class="border regLabel">rg10</td><td class="border regDisplay">1010</td></tr>
+                    <tr><td class="border regLabel">rg11</td><td class="border regDisplay">1011</td></tr>
+                    <tr><td class="border regLabel">rg12</td><td class="border regDisplay">1100</td></tr>
+                    <tr><td class="border regLabel">rg13</td><td class="border regDisplay">1101</td></tr>
+                    <tr><td class="border regLabel">rg14</td><td class="border regDisplay">1110</td></tr>
+                    <tr><td class="border regLabel">rg15</td><td class="border regDisplay">1111</td></tr>
                   </tbody>
                 </table>
 
@@ -197,7 +198,7 @@
   </div>
 
   <!-- ENTRADAS (escolha de função e variaveis) -->
-  <form>
+  <form id="submit">
     <div class="container d-flex justify-content-center">
       <!-- ESCOLHA DE FUNÇÃO -->
       <select id="selectFuncao" class="form-control entrada">
@@ -245,7 +246,7 @@
         </select>
       </div>
       <!-- SUBMIT -->
-      <button type="submit" class="btn btn-secondary entrada" onclick="getCellValues()">Submit</button>
+      <button type="submit" class="btn btn-secondary entrada">Submit</button>
     </div>
   </form>
   <!-- FIM DAS ENTRADAS  -->
