@@ -15,10 +15,14 @@ var ramValues = [];
 var functionValues = [];
 var regLabel = document.querySelectorAll(".regLabel");
 var regValues = [];
+var binValues = [];
 
 var aluFuncao = document.querySelector('.aluFuncao');
 var irFuncao = document.querySelector('.irFuncao');
 var pcFuncao = document.querySelector('.pcFuncao');
+
+// Função que está sendo executada no momento
+var executando = document.querySelector('#executando');
 
 
 // Colocar o valor da RAM no registrador selecionado
@@ -79,6 +83,9 @@ submit.addEventListener('submit', function (evento){
 
   // Cria o array do endereço da próxima instrução
   regValues.push(textContent = selectRegister[selectRegister.selectedIndex].value);
+
+  // Cria o array do conteúdo do endereço
+  binValues.push(bin1);
 
 
   // Contador para pintar 3
@@ -228,6 +235,13 @@ execute.addEventListener('submit', function(evento) {
 
   pcFuncao.textContent = regValues[1];
   pcFuncao.parentNode.classList.add("bg-warning");
+
+  if (executando.textContent == "mult") {
+    // console.log("pegou")
+    console.log((parseInt(binValues[1], 2) * parseInt(binValues[0], 2)).toString(2));
+
+      regDisplay[parseInt(regValues[0], 2)].textContent = ((parseInt(binValues[1], 2) * parseInt(binValues[0], 2)).toString(2));
+  }
 
   regValues.shift();
   functionValues.shift();
