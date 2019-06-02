@@ -47,18 +47,27 @@ submit.addEventListener('submit', function (evento){
   // Prevenir atualização da página
   evento.preventDefault();
 
+  alert("Submit!");
+
   var bin1 = (+entrada1.value).toString(2);
 
   //** Pintar 3 células na RAM e colocar os valores quando for submitado um input **\\
 
   // Seleciona o conteúdo da funcao selecionada e coloca na RAM
-  tds[i].textContent = selectFuncao[selectFuncao.selectedIndex].textContent;
+  // Função sleep para dar efeito do delay
+  var now = new Date().getTime();
+  while ( new Date().getTime() < now + 2000 ){
+    tds[i].textContent = selectFuncao[selectFuncao.selectedIndex].textContent;
 
-  // Adiciona os conteúdos dos inputs na RAM
-  tds[i+1].textContent = bin1;
+    // Adiciona os conteúdos dos inputs na RAM
+    tds[i+1].textContent = bin1;
 
-  // Seleciona o valor do index selecionado do regitrador e coloca na RAM.
-  tds[i+2].textContent = selectRegister[selectRegister.selectedIndex].value;
+    // Seleciona o valor do index selecionado do regitrador e coloca na RAM.
+    tds[i+2].textContent = selectRegister[selectRegister.selectedIndex].value;
+  }
+
+
+
 
   // Ja cria o Array com os valores da RAM no momento do input
   ramValues.push(selectFuncao[selectFuncao.selectedIndex].textContent);
@@ -96,111 +105,120 @@ execute.addEventListener('submit', function(evento) {
   // Prevenir atualização da página
   evento.preventDefault();
 
-  // ULTRA MASTER GAMBIARRA SEM LOOP NA TORA MESMO
-  for(var j = 2; j <= 45; j+=3){
-    if(ramValues[j] == regDisplay[0].textContent){
-      regDisplay[0].textContent = ramValues[j-1];
-      regDisplay[0].classList.add("bg-success");
-      regLabel[0].classList.add("bg-warning");
+  alert("Run!");
+
+  // DELAY
+  var now = new Date().getTime();
+  while ( new Date().getTime() < now + 2000 ){
+    // ULTRA MASTER GAMBIARRA SEM LOOP NA TORA MESMO
+    for(var j = 2; j <= 45; j+=3){
+      if(ramValues[j] == regDisplay[0].textContent){
+        regDisplay[0].textContent = ramValues[j-1];
+        regDisplay[0].classList.add("bg-success");
+        regLabel[0].classList.add("bg-warning");
+      }
+
+      if(ramValues[j] == regDisplay[1].textContent){
+        regDisplay[1].textContent = ramValues[j-1];
+        regDisplay[1].classList.add("bg-success");
+        regLabel[1].classList.add("bg-warning");
+      }
+
+      if(ramValues[j] == regDisplay[2].textContent){
+        regDisplay[2].textContent = ramValues[j-1];
+        regDisplay[2].classList.add("bg-success");
+        regLabel[2].classList.add("bg-warning");
+
+      }
+
+      if(ramValues[j] == regDisplay[3].textContent){
+        regDisplay[3].textContent = ramValues[j-1];
+        regDisplay[3].classList.add("bg-success");
+        regLabel[3].classList.add("bg-warning");
+
+      }
+
+      if(ramValues[j] == regDisplay[4].textContent){
+        regDisplay[4].textContent = ramValues[j-1];
+        regDisplay[4].classList.add("bg-success");
+        regLabel[4].classList.add("bg-warning");
+
+      }
+
+      if(ramValues[j] == regDisplay[5].textContent){
+        regDisplay[5].textContent = ramValues[j-1];
+        regDisplay[5].classList.add("bg-success");
+        regLabel[5].classList.add("bg-warning");
+
+      }
+
+      if(ramValues[j] == regDisplay[6].textContent){
+        regDisplay[6].textContent = ramValues[j-1];
+        regDisplay[6].classList.add("bg-success");
+        regLabel[6].classList.add("bg-warning");
+
+      }
+
+      if(ramValues[j] == regDisplay[7].textContent){
+        regDisplay[7].textContent = ramValues[j-1];
+        regDisplay[7].classList.add("bg-success");
+        regLabel[7].classList.add("bg-warning");
+
+      }
+
+      if(ramValues[j] == regDisplay[8].textContent){
+        regDisplay[8].textContent = ramValues[j-1];
+        regDisplay[8].classList.add("bg-success");
+        regLabel[8].classList.add("bg-warning");
+
+      }
+
+      if(ramValues[j] == regDisplay[9].textContent){
+        regDisplay[9].textContent = ramValues[j-1];
+        regDisplay[9].classList.add("bg-success");
+        regLabel[9].classList.add("bg-warning");
+
+      }
+
+      if(ramValues[j] == regDisplay[10].textContent){
+        regDisplay[10].textContent = ramValues[j-1];
+        regDisplay[10].classList.add("bg-success");
+        regLabel[10].classList.add("bg-warning");
+
+      }
+
+      if(ramValues[j] == regDisplay[11].textContent){
+        regDisplay[11].textContent = ramValues[j-1];
+        regDisplay[11].classList.add("bg-success");
+        regLabel[11].classList.add("bg-warning");
+
+      }
+
+      if(ramValues[j] == regDisplay[12].textContent){
+        regDisplay[12].textContent = ramValues[j-1];
+        regDisplay[12].classList.add("bg-success");
+        regLabel[12].classList.add("bg-warning");
+
+      }
+
+      if(ramValues[j] == regDisplay[13].textContent){
+        regDisplay[13].textContent = ramValues[j-1];
+        regDisplay[13].classList.add("bg-success");
+        regLabel[13].classList.add("bg-warning");
+
+      }
+
+      if(ramValues[j] == regDisplay[14].textContent){
+        regDisplay[14].textContent = ramValues[j-1];
+        regDisplay[14].classList.add("bg-success");
+        regLabel[14].classList.add("bg-warning");
+
+      }
     }
 
-    if(ramValues[j] == regDisplay[1].textContent){
-      regDisplay[1].textContent = ramValues[j-1];
-      regDisplay[1].classList.add("bg-success");
-      regLabel[1].classList.add("bg-warning");
-    }
-
-    if(ramValues[j] == regDisplay[2].textContent){
-      regDisplay[2].textContent = ramValues[j-1];
-      regDisplay[2].classList.add("bg-success");
-      regLabel[2].classList.add("bg-warning");
-
-    }
-
-    if(ramValues[j] == regDisplay[3].textContent){
-      regDisplay[3].textContent = ramValues[j-1];
-      regDisplay[3].classList.add("bg-success");
-      regLabel[3].classList.add("bg-warning");
-
-    }
-
-    if(ramValues[j] == regDisplay[4].textContent){
-      regDisplay[4].textContent = ramValues[j-1];
-      regDisplay[4].classList.add("bg-success");
-      regLabel[4].classList.add("bg-warning");
-
-    }
-
-    if(ramValues[j] == regDisplay[5].textContent){
-      regDisplay[5].textContent = ramValues[j-1];
-      regDisplay[5].classList.add("bg-success");
-      regLabel[5].classList.add("bg-warning");
-
-    }
-
-    if(ramValues[j] == regDisplay[6].textContent){
-      regDisplay[6].textContent = ramValues[j-1];
-      regDisplay[6].classList.add("bg-success");
-      regLabel[6].classList.add("bg-warning");
-
-    }
-
-    if(ramValues[j] == regDisplay[7].textContent){
-      regDisplay[7].textContent = ramValues[j-1];
-      regDisplay[7].classList.add("bg-success");
-      regLabel[7].classList.add("bg-warning");
-
-    }
-
-    if(ramValues[j] == regDisplay[8].textContent){
-      regDisplay[8].textContent = ramValues[j-1];
-      regDisplay[8].classList.add("bg-success");
-      regLabel[8].classList.add("bg-warning");
-
-    }
-
-    if(ramValues[j] == regDisplay[9].textContent){
-      regDisplay[9].textContent = ramValues[j-1];
-      regDisplay[9].classList.add("bg-success");
-      regLabel[9].classList.add("bg-warning");
-
-    }
-
-    if(ramValues[j] == regDisplay[10].textContent){
-      regDisplay[10].textContent = ramValues[j-1];
-      regDisplay[10].classList.add("bg-success");
-      regLabel[10].classList.add("bg-warning");
-
-    }
-
-    if(ramValues[j] == regDisplay[11].textContent){
-      regDisplay[11].textContent = ramValues[j-1];
-      regDisplay[11].classList.add("bg-success");
-      regLabel[11].classList.add("bg-warning");
-
-    }
-
-    if(ramValues[j] == regDisplay[12].textContent){
-      regDisplay[12].textContent = ramValues[j-1];
-      regDisplay[12].classList.add("bg-success");
-      regLabel[12].classList.add("bg-warning");
-
-    }
-
-    if(ramValues[j] == regDisplay[13].textContent){
-      regDisplay[13].textContent = ramValues[j-1];
-      regDisplay[13].classList.add("bg-success");
-      regLabel[13].classList.add("bg-warning");
-
-    }
-
-    if(ramValues[j] == regDisplay[14].textContent){
-      regDisplay[14].textContent = ramValues[j-1];
-      regDisplay[14].classList.add("bg-success");
-      regLabel[14].classList.add("bg-warning");
-
-    }
   }
+
+
 
   aluFuncao.textContent = functionValues[0];
   aluFuncao.parentNode.classList.add("bg-primary");
@@ -214,6 +232,5 @@ execute.addEventListener('submit', function(evento) {
   regValues.shift();
   functionValues.shift();
 
-  alert("Run!");
 
 });
