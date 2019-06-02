@@ -238,13 +238,26 @@ execute.addEventListener('submit', function(evento) {
 
   if (executando.textContent == "mult") {
     // console.log("pegou")
-    console.log((parseInt(binValues[1], 2) * parseInt(binValues[0], 2)).toString(2));
-
       regDisplay[(parseInt(regValues[0], 2)-1)].textContent = ((parseInt(binValues[1], 2) * parseInt(binValues[0], 2)).toString(2));
       regValues.shift();
   }
+  if (executando.textContent == "add") {
+    // console.log("pegou")
+      regDisplay[(parseInt(regValues[0], 2)-1)].textContent = ((parseInt(binValues[1], 2) + parseInt(binValues[0], 2)).toString(2));
+      regValues.shift();
+  }
+  if (executando.textContent == "sub") {
+    // console.log("pegou")
+      regDisplay[(parseInt(regValues[0], 2)-1)].textContent = ((parseInt(binValues[1], 2) - parseInt(binValues[0], 2)).toString(2));
+      regValues.shift();
+  }
+  if (executando.textContent == "div") {
+    // console.log("pegou")
+      regDisplay[(parseInt(regValues[0], 2)-1)].textContent = (parseInt((parseInt(binValues[1], 2) / parseInt(binValues[0], 2))).toString(2));
+      regValues.shift();
+  }
 
-  
+
   functionValues.shift();
 
 
