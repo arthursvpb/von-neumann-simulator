@@ -256,6 +256,23 @@ execute.addEventListener('submit', function(evento) {
       regDisplay[(parseInt(regValues[0], 2)-1)].textContent = (parseInt((parseInt(binValues[1], 2) / parseInt(binValues[0], 2))).toString(2));
       regValues.shift();
   }
+  if (executando.textContent == "and") {
+    // console.log("pegou")
+      regDisplay[(parseInt(regValues[0], 2)-1)].textContent = (parseInt((parseInt(binValues[1], 2) && parseInt(binValues[0], 2))).toString(2));
+      regValues.shift();
+  }
+  if (executando.textContent == "or") {
+    // console.log("pegou")
+      regDisplay[(parseInt(regValues[0], 2)-1)].textContent = (parseInt((parseInt(binValues[1], 2) || parseInt(binValues[0], 2))).toString(2));
+      regValues.shift();
+  }
+  if (executando.textContent == "not") {
+    // console.log("pegou")
+      if ((parseInt(binValues[0], 2)).toString(2) == (parseInt(binValues[1], 2)).toString(2)) {
+        regDisplay[(parseInt(regValues[0], 2)-1)].textContent = regDisplay[(parseInt(regValues[0], 2)-1)].textContent * (- 1) + 1;
+      };
+      regValues.shift();
+  }
 
 
   functionValues.shift();
