@@ -203,13 +203,13 @@ execute.addEventListener('submit', function(evento) {
   }
 
   irFuncao.textContent = functionValues[0];
-  irFuncao.classList.add("bg-info");
+  irFuncao.parentNode.classList.add("bg-info");
 
   aluFuncao.textContent = functionValues[1];
-  aluFuncao.classList.add("bg-primary");
+  aluFuncao.parentNode.classList.add("bg-primary");
 
   pcFuncao.textContent = regValues[0];
-  pcFuncao.classList.add("bg-warning");
+  pcFuncao.parentNode.classList.add("bg-warning");
 
   regValues.shift();
   functionValues.shift();
