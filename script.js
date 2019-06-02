@@ -109,7 +109,7 @@ execute.addEventListener('submit', function(evento) {
 
   // DELAY
   var now = new Date().getTime();
-  while ( new Date().getTime() < now + 2000 ){
+  while ( new Date().getTime() < now + 1000 ){
     // ULTRA MASTER GAMBIARRA SEM LOOP NA TORA MESMO
     for(var j = 2; j <= 45; j+=3){
       if(ramValues[j] == regDisplay[0].textContent){

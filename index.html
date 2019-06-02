@@ -159,7 +159,12 @@
               <div class="retangulo border mr-4 mt-3">
                 <p class="m-2">ALU</p>
                 <div id="alu" class="border">
+                  <p class="m-2">EXEC</p>
                   <p class="m-2 aluFuncao"></p>
+                </div>
+                <div class="border flags">
+                  <p class="m-2">FLAGS</p>
+                  <p class="m-2"></p>
                 </div>
               </div>
               <div id="pc" class="border">
@@ -208,8 +213,8 @@
       <!-- ESCOLHA DE FUNÇÃO -->
       <select id="selectFuncao" class="form-control entrada">
         <option disabled selected>function</option>
-        <option>?</option>
-        <option>?</option>
+        <option>load</option>
+        <option disabled>store</option>
         <option>and</option>
         <option>or</option>
         <option>not</option>

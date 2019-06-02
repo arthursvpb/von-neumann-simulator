@@ -69,8 +69,18 @@ body{
   margin: 10px;
 }
 
-#pc, #ir, #alu{
+#pc, #ir, #alu, .flags{
   height: 100px;
   width: 100px;
   margin-top: 20px;
+}
+
+#alu, .flags{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.flags{
+  width: 200px;
+  float: right;
 }
