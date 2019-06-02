@@ -202,18 +202,18 @@ execute.addEventListener('submit', function(evento) {
     }
   }
 
-  irFuncao.textContent = functionValues[0];
-  irFuncao.parentNode.classList.add("bg-info");
-
-  aluFuncao.textContent = functionValues[1];
+  aluFuncao.textContent = functionValues[0];
   aluFuncao.parentNode.classList.add("bg-primary");
 
-  pcFuncao.textContent = regValues[0];
+  irFuncao.textContent = functionValues[1];
+  irFuncao.parentNode.classList.add("bg-info");
+
+  pcFuncao.textContent = regValues[1];
   pcFuncao.parentNode.classList.add("bg-warning");
 
   regValues.shift();
   functionValues.shift();
 
-  alert("EXECUTOU ESSA MIZERA");
+  alert("Run!");
 
 });
