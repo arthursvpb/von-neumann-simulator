@@ -25,7 +25,10 @@ var pcFuncao = document.querySelector('.pcFuncao');
 var executando = document.querySelector('#executando');
 
 
-// Colocar o valor da RAM no registrador selecionado
+// Variáveis das FLAGS
+ var flags = document.querySelector(".flags");
+
+
 
 
 
@@ -236,24 +239,132 @@ execute.addEventListener('submit', function(evento) {
   pcFuncao.textContent = regValues[1];
   pcFuncao.parentNode.classList.add("bg-warning");
 
+
+
+
+
+// FUNÇÕES ASSEMBLY
+
   if (executando.textContent == "mult") {
-    // console.log("pegou")
+
       regDisplay[(parseInt(regValues[0], 2)-1)].textContent = ((parseInt(binValues[1], 2) * parseInt(binValues[0], 2)).toString(2));
+
+      // CARRY FLAG
+      if((parseInt(binValues[0], 2) * parseInt(binValues[1], 2)) == 16){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "CARRY";
+      }
+
+      // OVERFLOW FLAG
+      if((parseInt(binValues[0], 2) * parseInt(binValues[1], 2)) > 16){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "OVERFLOW";
+      }
+
+      // ZERO FLAG
+      if((parseInt(binValues[0], 2) * parseInt(binValues[1], 2)) == 0){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "ZERO";
+      }
+
+      // SIGN FLAG
+      if(parseInt(binValues[0], 2) * (parseInt(binValues[1], 2) ) < 0){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "SIGN";
+      }
+
       regValues.shift();
   }
   if (executando.textContent == "add") {
     // console.log("pegou")
       regDisplay[(parseInt(regValues[0], 2)-1)].textContent = ((parseInt(binValues[1], 2) + parseInt(binValues[0], 2)).toString(2));
+
+      // CARRY FLAG
+      if((parseInt(binValues[1], 2) + parseInt(binValues[0], 2)) == 16){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "CARRY";
+      }
+
+      // OVERFLOW FLAG
+      if((parseInt(binValues[1], 2) + parseInt(binValues[0], 2)) > 16){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "OVERFLOW";
+      }
+
+      // ZERO FLAG
+      if((parseInt(binValues[1], 2) + parseInt(binValues[0], 2)) == 0){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "ZERO";
+      }
+
+      // SIGN FLAG
+      if((parseInt(binValues[1], 2) + parseInt(binValues[0], 2)) < 0){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "ZERO";
+      }
+
+
+
       regValues.shift();
   }
   if (executando.textContent == "sub") {
     // console.log("pegou")
       regDisplay[(parseInt(regValues[0], 2)-1)].textContent = ((parseInt(binValues[1], 2) - parseInt(binValues[0], 2)).toString(2));
+
+      // CARRY FLAG
+      if((parseInt(binValues[0], 2) - parseInt(binValues[1], 2)) == 16){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "CARRY";
+      }
+
+      // OVERFLOW FLAG
+      if((parseInt(binValues[0], 2) - parseInt(binValues[1], 2)) > 16){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "OVERFLOW";
+      }
+
+      // ZERO FLAG
+      if((parseInt(binValues[0], 2) - parseInt(binValues[1], 2)) == 0){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "ZERO";
+      }
+
+      // SIGN FLAG
+      if(parseInt(binValues[0], 2) - (parseInt(binValues[1], 2) ) < 0){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "SIGN";
+      }
+
       regValues.shift();
   }
   if (executando.textContent == "div") {
     // console.log("pegou")
       regDisplay[(parseInt(regValues[0], 2)-1)].textContent = (parseInt((parseInt(binValues[1], 2) / parseInt(binValues[0], 2))).toString(2));
+
+      // CARRY FLAG
+      if((parseInt(binValues[0], 2) / parseInt(binValues[1], 2)) == 16){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "CARRY";
+      }
+
+      // OVERFLOW FLAG
+      if((parseInt(binValues[0], 2) / parseInt(binValues[1], 2)) > 16){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "OVERFLOW";
+      }
+
+      // ZERO FLAG
+      if((parseInt(binValues[0], 2) / parseInt(binValues[1], 2)) == 0){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "ZERO";
+      }
+
+      // SIGN FLAG
+      if(parseInt(binValues[0], 2) / (parseInt(binValues[1], 2) ) < 0){
+         flags.classList.add("bg-danger");
+         flags.childNodes[3].textContent = "SIGN";
+      }
+
       regValues.shift();
   }
   if (executando.textContent == "and") {
