@@ -385,7 +385,76 @@ execute.addEventListener('submit', function(evento) {
       regValues.shift();
   }
 
+  if(executando.textContent == "jmp=="){
 
+    if (regDisplay[(parseInt(regValues[0], 2)-1)].textContent != binValues[binValues.length-1]) {
+
+      alert("Erro de lógica. Impossível prosseguir.");
+      location.reload();
+
+    }
+
+    regValues.shift();
+
+  }
+
+  if(executando.textContent == "jmp>"){
+
+    if (regDisplay[(parseInt(regValues[0], 2)-1)].textContent > binValues[binValues.length-1]) {
+
+      alert("Erro de lógica. Impossível prosseguir.");
+      location.reload();
+
+    }
+
+    regValues.shift();
+
+  }
+
+  if(executando.textContent == "jmp<"){
+
+    if (regDisplay[(parseInt(regValues[0], 2)-1)].textContent < binValues[binValues.length-1]) {
+
+      alert("Erro de lógica. Impossível prosseguir.");
+      location.reload();
+
+    }
+
+    regValues.shift();
+
+  }
+
+  if(executando.textContent == "jmp!="){
+
+    if (regDisplay[(parseInt(regValues[0], 2)-1)].textContent == binValues[binValues.length-1]) {
+
+      alert("Erro de lógica. Impossível prosseguir.");
+      location.reload();
+
+    }
+
+    regValues.shift();
+
+  }
+
+  if(executando.textContent == "nop"){
+
+      alert("Sem operação!");
+
+    regValues.shift();
+
+  }
+
+  if(executando.textContent == "store"){
+
+      alert("Acesso de memória aleatória!");
+
+    regValues.shift();
+
+  }
+
+
+  // Não tirar nem fudendo
   functionValues.shift();
 
 
